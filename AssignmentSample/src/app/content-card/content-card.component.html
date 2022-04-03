@@ -1,0 +1,14 @@
+<img *ngIf="content?.imgURL" (click)="logId()" [src]="content?.imgURL">
+<img *ngIf="!content?.imgURL" (click)="logId()"
+  src="https://i.pinimg.com/originals/ca/5b/a7/ca5ba7d121989a03a9e22518a3ccaab1.png"> <!-- Default image -->
+<h2>{{ content?.title}}</h2>
+<p class="description">{{ content?.description }}</p>
+<div class="meta-data">
+  <div class="author-info">
+    <span class="creator">{{ content?.creator }}</span>
+    <span appHoverAffect affect="textDecoration" *ngIf="content?.type" class="type">{{ content?.type }}</span>
+  </div>
+  <div *ngIf="content?.tags" class="tags">
+    <span appHoverAffect affect="fontWeight" class="tag" *ngFor="let tag of content?.tags">{{ tag }}</span>
+  </div>
+</div>

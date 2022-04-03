@@ -1,0 +1,59 @@
+//:host.is-first{
+//  border: 2px solid #000;
+//}
+:host {
+  border: 1px solid #337d33;
+  display: block;
+  width: 400px;
+  margin: 10px auto;
+  text-align: center;
+
+  &.is-first {
+    border: 2px solid #000;
+  }
+  &.rookie {
+    background-color: burlywood;
+  }
+  &.champion {
+    background-color: aquamarine;
+  }
+  &.no-type {
+    background-color: peru;
+  }
+  &.found {
+    border-color: #00ff00;
+    border-width: 5px;
+  }
+  &.individualDigimon {
+    box-shadow: 5px 10px #55555588;
+  }
+  img {
+    margin: 10px;
+    max-width: 350px;
+  }
+  .meta-data {
+    //height: 80px;
+  }
+  .creator,
+  .type,
+  .tags {
+    margin: 8px 16px 8px 0;
+  }
+  .author-info {
+    height: 24px;
+  }
+  .creator {
+  }
+  .type {
+  }
+  .tags {
+    color: #fff;
+    margin: 16px 0;
+  }
+  .tag {
+    padding: 8px;
+    background-color: #747bdb;
+    border-radius: 8px;
+    margin: 0 5px 0 0;
+  }
+}

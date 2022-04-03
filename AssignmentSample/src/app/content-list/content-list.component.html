@@ -1,0 +1,30 @@
+<app-modify-content-component (newContentEvent)="addContentToList($event)" (updateContentEvent)="updateContentOnList()"></app-modify-content-component>
+
+<!--<form>-->
+<div>
+  <input #titleSearch>
+  <button (click)="checkForTitle(titleSearch.value)">Title Check</button>
+  <div>
+    <span class="success" *ngIf="titleFound"> {{ titleSearch.value}} found!</span>
+    <span class="failure" *ngIf="titleFound === false"> {{ titleSearch.value}} not found!</span>
+  </div>
+</div>
+<!--</form>-->
+
+<!-- No type set -->
+<app-content-card appHoverAffect affect="border" [firstOrLast]="isTheFirstElement || isLast"
+  [class.found]="titleSearch.value === item.title"
+  *ngFor="let item of (digimonList | typeFilter); first as isTheFirstElement; last as isLast" [content]="item"
+  [class.is-first]="isTheFirstElement" class="no-type"></app-content-card>
+
+<!-- Rookie type set -->
+<app-content-card appHoverAffect affect="border" [firstOrLast]="isTheFirstElement || isLast"
+  [class.found]="titleSearch.value === item.title"
+  *ngFor="let item of (digimonList | typeFilter: 'Rookie'); first as isTheFirstElement; last as isLast" [content]="item"
+  [class.is-first]="isTheFirstElement" class="rookie"></app-content-card>
+
+<!--Champion type set -->
+<app-content-card appHoverAffect affect="border" [firstOrLast]="isTheFirstElement || isLast"
+  [class.found]="titleSearch.value === item.title"
+  *ngFor="let item of (digimonList | typeFilter: 'Champion'); first as isTheFirstElement; last as isLast"
+  [content]="item" [class.is-first]="isTheFirstElement" [class]="item.type | lowercase"></app-content-card>

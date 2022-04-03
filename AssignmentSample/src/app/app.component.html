@@ -1,0 +1,11 @@
+<h1>Individual item</h1>
+<p>
+    <label>Display single item at id: <input #id></label>
+    <button (click)="displayItem(id.value)">Display item!</button>
+</p>
+<app-content-card [content]="individualDigimon" class="individualDigimon"></app-content-card>
+<br><hr>
+<h1>Content Lists</h1>
+<app-content-list></app-content-list>
+
+<app-messages></app-messages>
