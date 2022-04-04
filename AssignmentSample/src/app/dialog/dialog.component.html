@@ -1,0 +1,37 @@
+<mat-form-field>
+<div>
+    <mat-label>ID: </mat-label>
+    <input matInput [(ngModel)]="tempid" type="number">
+</div>
+<div>
+    <mat-label>Title: </mat-label>
+    <input matInput [(ngModel)]="newContent.title">
+</div>
+<div>
+    <mat-label>Description:</mat-label>
+    <input matInput[(ngModel)]="newContent.description">
+</div>
+<div>
+    <mat-label>Creator: </mat-label>
+    <input matInput [(ngModel)]="newContent.creator">
+</div>
+<div>
+    <mat-label>Image URL:</mat-label>
+        <input matInput [(ngModel)]="newContent.imgURL">
+</div>
+<div>
+    <mat-label>Type:</mat-label>
+    <input matInput [(ngModel)]="newContent.type">
+</div>
+<div>
+    <mat-label>Tags: </mat-label>
+    <input matInput [(ngModel)]="temptags">
+</div>
+</mat-form-field>
+<div>
+    <button mat-flat-button (click)="modifyOrAddItemToParent()">{{(tempid !== "") ? "Update Content": "Add Content"}}</button>
+</div>
+
+<div>
+    <button mat-flat-button (click)="closeDialog()">Cancel</button>
+</div>
