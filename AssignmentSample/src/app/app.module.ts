@@ -10,13 +10,16 @@ import { MessagesComponent } from './messages/messages.component';
 import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./services/in-memory-data.service";
-import { ModifyContentComponentComponent } from './modify-content-component/modify-content-component.component';
-import { FormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModifyContentComponentComponent } from './modify-content-component/modify-content-component.component';import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button'
 import { MatInputModule } from'@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
-import { DialogComponent } from './dialog/dialog.component'
+import { DialogComponent } from './dialog/dialog.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatChipsModule } from '@angular/material/chips';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +30,8 @@ import { DialogComponent } from './dialog/dialog.component'
     HoverAffectDirective,
     MessagesComponent,
     ModifyContentComponentComponent,
-    
+    DialogComponent
+   
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,12 @@ import { DialogComponent } from './dialog/dialog.component'
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
+    MatDialogModule,
+    MatCardModule,
+    MatBadgeModule,
+    MatChipsModule, 
     MatDialogModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

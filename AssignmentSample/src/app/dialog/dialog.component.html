@@ -1,37 +1,55 @@
-<mat-form-field>
-<div>
-    <mat-label>ID: </mat-label>
-    <input matInput [(ngModel)]="tempid" type="number">
+<h1 mat-dialog-title>Add Digimon</h1>
+<div mat-dialog-content>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>ID</mat-label>
+      <input matInput [(ngModel)]="tempid" type="number">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput [(ngModel)]="data.title">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <input matInput [(ngModel)]="data.description">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Creator</mat-label>
+      <input matInput [(ngModel)]="data.creator">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Image URL</mat-label>
+      <input matInput [(ngModel)]="data.imgURL">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Type</mat-label>
+      <input matInput [(ngModel)]="data.type">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Tags</mat-label>
+      <input matInput [(ngModel)]="temptags">
+    </mat-form-field>
+  </div>
 </div>
-<div>
-    <mat-label>Title: </mat-label>
-    <input matInput [(ngModel)]="newContent.title">
-</div>
-<div>
-    <mat-label>Description:</mat-label>
-    <input matInput[(ngModel)]="newContent.description">
-</div>
-<div>
-    <mat-label>Creator: </mat-label>
-    <input matInput [(ngModel)]="newContent.creator">
-</div>
-<div>
-    <mat-label>Image URL:</mat-label>
-        <input matInput [(ngModel)]="newContent.imgURL">
-</div>
-<div>
-    <mat-label>Type:</mat-label>
-    <input matInput [(ngModel)]="newContent.type">
-</div>
-<div>
-    <mat-label>Tags: </mat-label>
-    <input matInput [(ngModel)]="temptags">
-</div>
-</mat-form-field>
-<div>
-    <button mat-flat-button (click)="modifyOrAddItemToParent()">{{(tempid !== "") ? "Update Content": "Add Content"}}</button>
-</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="closeDialog()">Cancel</button>
+  <!-- alternative solution -->
+  <!-- <button mat-raised-button color="primary" (click)="sendDataBack()" -->
 
-<div>
-    <button mat-flat-button (click)="closeDialog()">Cancel</button>
+  <button mat-raised-button color="primary"
+    [mat-dialog-close]="{ content: data, tags: temptags, id: tempid }" cdkFocusInitial>
+    {{(tempid !== "") ? "Update Content": "Add Content"}}
+  </button>
 </div>
