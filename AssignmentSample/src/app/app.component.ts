@@ -20,20 +20,20 @@ export class AppComponent implements OnInit {
       digimonAtIndex => this.individualDigimon = digimonAtIndex
     );
   }
-  displayItem(id: string): void{
-    if (!parseInt(id)) {
-      this.messageService.add("Please enter a number value");
-      return;
-    }
-    let idNumber = parseInt(id);
-    this.digimonService.getContent().subscribe(digimonArray => {
-      let digimonInArray = digimonArray.find(individualDigimon => individualDigimon.id === idNumber);
-      if (!digimonInArray) {
-        this.messageService.add("Please enter a number value for a valid id");
-      }
-      else {
-        this.individualDigimon = digimonInArray;
-      }
-    });
-  }
-}
+//   displayItem(id: string): void{
+//     if (!parseInt(id)) {
+//       this.messageService.add("Please enter a number value");
+//       return;
+//     }
+//     let idNumber = parseInt(id);
+//     this.digimonService.getContent().subscribe(digimonArray => {
+//       let digimonInArray = digimonArray.find(individualDigimon => individualDigimon.id === idNumber);
+//       if (!digimonInArray) {
+//         this.messageService.add("Please enter a number value for a valid id");
+//       }
+//       else {
+//         this.individualDigimon = digimonInArray;
+//       }
+//     });
+//   }
+ }

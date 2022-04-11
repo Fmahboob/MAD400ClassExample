@@ -6,24 +6,15 @@ import { ContentDetailComponent } from './content-detail/content-detail.componen
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
-const routes: Routes = [{
-  path: "",
-  redirectTo: "/content",
-  pathMatch: "full"
-},{
-  path: "content",
-  component: ContentListComponent
-},
-{
-  path: "content/:id",
-  component: ContentDetailComponent
-}, 
-{
-  path: "**",
-  component: PageNotFoundComponent
-}
 
-];
+const routes: Routes = [{
+  path: "content",
+
+  loadChildren: () =>
+  import("./content/content.module")
+  .then ((c) => c.ContentModule),
+}
+    ];
 @NgModule({
  
   imports: [

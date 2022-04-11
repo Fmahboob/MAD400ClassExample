@@ -26,7 +26,7 @@ export class ContentDetailComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
      
-      this.id = Number(params.get('id') );
+      this.id = Number(params.get('id') ?? 0 );
       
       this.digimonService.getContentItem(this.id).subscribe((singleDigimon)=> {
         this.individualDigimon = singleDigimon
