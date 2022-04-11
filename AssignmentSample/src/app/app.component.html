@@ -1,6 +1,6 @@
-<h1>Individual item</h1>
+<!-- <h1>Individual item</h1>
 <p>
-    <mat-form-field>
+    <mat-form-field appearance="fill">
         <mat-label>Display single item at id: </mat-label>
         <input matInput #id>
    
@@ -13,4 +13,9 @@
 <h1>Content Lists</h1>
 <app-content-list></app-content-list>
 
-<app-messages></app-messages>
+<a routerLink="content" routerLinkActive="active_link">Content List</a>
+<a routerLink="contnet/42" routerLinkActive="active_link">This is id 42</a>
+<a routerLink="pageNotFound" routerLinkActive="active_link">Page not pageNotFound</a><br />
+<app-messages></app-messages> -->
+
+<router-outlet></router-outlet>

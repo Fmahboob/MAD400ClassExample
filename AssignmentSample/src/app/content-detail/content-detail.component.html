@@ -1,0 +1,9 @@
+<mat-card>
+  <div>Title: {{ individualDigimon.title }}</div><br />
+
+  <div>Creator: {{ individualDigimon.creator }}</div><br />
+  <img *ngIf="individualDigimon.imgURL" (click)="outPutMessage()" [src]="individualDigimon?.imgURL">
+  <div *ngIf="individualDigimon.type" class="type"> Type: {{ individualDigimon.type }}</div><br />
+  <div *ngIf="individualDigimon.tags">Tags: {{ individualDigimon.tags }}</div><br />
+<a routerLink="" routerLinkActive="active">Content List</a><br>
+</mat-card>

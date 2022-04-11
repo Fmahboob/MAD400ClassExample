@@ -19,6 +19,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatChipsModule } from '@angular/material/chips';
 import { FormsModule } from '@angular/forms';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AppRoutngModule } from './app-routing.module';
+
 
 
 @NgModule({
@@ -30,7 +34,9 @@ import { FormsModule } from '@angular/forms';
     HoverAffectDirective,
     MessagesComponent,
     ModifyContentComponentComponent,
-    DialogComponent
+    DialogComponent,
+    ContentDetailComponent,
+    PageNotFoundComponent
    
   ],
   imports: [
@@ -49,10 +55,12 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatBadgeModule,
     MatChipsModule, 
-    MatDialogModule
+    MatDialogModule, 
+    AppRoutngModule
 
   ],
   providers: [],
+  entryComponents: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,5 @@
+
+
 <mat-card *ngIf="content">
   <mat-card-header>
     <!-- <div mat-card-avatar class="example-header-image"></div> -->
@@ -27,4 +29,8 @@
     <app-modify-content-component buttonText="Update Content" [newContent]="content">
     </app-modify-content-component>
   </mat-card-actions>
+  
 </mat-card>
+<a [routerLink]="['/content', content?.id]" routerLinkActive="active">
+  Content Details
+  </a>
