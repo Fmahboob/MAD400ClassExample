@@ -4,12 +4,12 @@ import { ContentDetailComponent } from '../content-detail/content-detail.compone
 import { ContentListComponent } from '../content-list/content-list.component';
 import { ContentComponent } from './content.component';
 
-const routes: Routes = [{ path: '', component: ContentListComponent },
+const routes: Routes = [{ path: "", component: ContentListComponent },
 {path: ":id", component: ContentDetailComponent},
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class ContentRoutingModule { }

@@ -28,14 +28,8 @@ import { AppRoutngModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
-    ContentCardComponent,
-    ContentListComponent,
-    TypeFilterPipe,
-    HoverAffectDirective,
     MessagesComponent,
-    ModifyContentComponentComponent,
     DialogComponent,
-    ContentDetailComponent,
     PageNotFoundComponent
    
   ],
@@ -55,7 +49,7 @@ import { AppRoutngModule } from './app-routing.module';
     MatCardModule,
     MatBadgeModule,
     MatChipsModule, 
-    MatDialogModule, 
+   
     AppRoutngModule
 
   ],

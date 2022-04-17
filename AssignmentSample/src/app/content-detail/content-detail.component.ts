@@ -30,7 +30,7 @@ export class ContentDetailComponent implements OnInit {
       
       this.digimonService.getContentItem(this.id).subscribe((singleDigimon)=> {
         this.individualDigimon = singleDigimon
-        this.messageService
+      
 
       })
     })

@@ -2,10 +2,9 @@
 
 <!--<form>-->
 <div>
-  <mat-form-field>
   <input matInput #titleSearch>
   <button mat-flat-button (click)="checkForTitle(titleSearch.value)">Title Check</button>
-</mat-form-field>
+
   <div>
     <span class="success" *ngIf="titleFound"> {{ titleSearch.value}} found!</span>
     <span class="failure" *ngIf="titleFound === false"> {{ titleSearch.value}} not found!</span>

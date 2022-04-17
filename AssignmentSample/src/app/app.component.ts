@@ -10,15 +10,15 @@ import { MessageService } from './services/message.service';
 })
 export class AppComponent implements OnInit {
   title = 'AssignmentSample';
-  individualDigimon?: Content;
+ // individualDigimon?: Content;
 
-  constructor(private digimonService: DigimonService, private messageService: MessageService) {
+  constructor(private messageService: MessageService) {
   }
 
   ngOnInit(): void{
-    this.digimonService.getContentItem(2).subscribe(
-      digimonAtIndex => this.individualDigimon = digimonAtIndex
-    );
+    // this.digimonService.getContentItem(2).subscribe(
+    //   digimonAtIndex => this.individualDigimon = digimonAtIndex
+    // );
   }
 //   displayItem(id: string): void{
 //     if (!parseInt(id)) {

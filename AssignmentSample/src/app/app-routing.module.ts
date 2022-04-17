@@ -8,12 +8,23 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 
 const routes: Routes = [{
-  path: "content",
-
+  path: "",
+  redirectTo: "/list",
+  pathMatch: "full"
+},
+{
+  path: 'list',
   loadChildren: () =>
   import("./content/content.module")
   .then ((c) => c.ContentModule),
+},
+{
+  path: "",
+  component: PageNotFoundComponent
 }
+
+
+
     ];
 @NgModule({
  
