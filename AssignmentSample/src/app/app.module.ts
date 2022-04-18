@@ -22,6 +22,8 @@ import { FormsModule } from '@angular/forms';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppRoutngModule } from './app-routing.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 
@@ -50,7 +52,12 @@ import { AppRoutngModule } from './app-routing.module';
     MatBadgeModule,
     MatChipsModule, 
    
-    AppRoutngModule
+    AppRoutngModule, ServiceWorkerModule.register('ngsw-worker.js', {
+  enabled: environment.production,
+  // Register the ServiceWorker as soon as the application is stable
+  // or after 30 seconds (whichever comes first).
+  registrationStrategy: 'registerWhenStable:30000'
+})
 
   ],
   providers: [],
